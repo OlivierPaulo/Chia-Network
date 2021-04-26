@@ -3,8 +3,8 @@ import os
 import pandas as pd
 
 def check_farm_summary():
-    #req = os.popen("chia farm summary").read()
-    req = "Farming status: Farming\nTotal chia farmed: 0.0\nUser transaction fees: 0.0\nBlock rewards: 0.0\nLast height farmed: 0\nPlot count: 1\nTotal size of plots: 101.368 GiB\nEstimated network space: 731.175 PiB\nExpected time to win: 4 years and 3 months\nNote: log into your key using 'chia wallet show' to see rewards for each key\n"
+    req = os.popen("chia farm summary").read()
+    #req = "Farming status: Farming\nTotal chia farmed: 0.0\nUser transaction fees: 0.0\nBlock rewards: 0.0\nLast height farmed: 0\nPlot count: 1\nTotal size of plots: 101.368 GiB\nEstimated network space: 731.175 PiB\nExpected time to win: 4 years and 3 months\nNote: log into your key using 'chia wallet show' to see rewards for each key\n"
     start = req.find("Total chia farmed: ")
     start2 = req.find("Total chia farmed: ") + len("Total chia farmed: ")
     end = req[start2:].find('\n')
